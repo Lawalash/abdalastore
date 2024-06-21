@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* src/styles/navbar.css */
+@media (max-width: 620px) {
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-toggler {
+  order: 1;
+}
+
+.navbar-collapse {
+  order: 2;
+}
+
+.navbar-nav.ml-auto {
+  order: 3;
+}
+
+.custom-modal .modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  box-shadow: none;
+}
+
+.custom-modal .modal-body {
+  text-align: center;
+  padding: 2rem;
+}
+
+.custom-modal .nav-link {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-info hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 1rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ml-2 {
+  margin-left: 5px;
+  color: black;
+}
+
+.contact-info hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 1rem;
+}
+
+.category-info {
+  margin-top: 1rem;
+}
+
+.category-info h5 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #FFAD12;
+}
+
+.category-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-info ul li a {
+  text-decoration: none; /* Remover sublinhado nos links dentro de ul > li */
+  color: inherit; /* Herdar a cor padrão do texto */
+}
+.category-info ul li a:hover{
+  color: #FFAD12;
+  font-weight: bolder;
+}
+.category-info ul li {
+  margin: 0.5rem 0;
+}
+
+.badge-custom {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+}
