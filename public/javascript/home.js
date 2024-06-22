@@ -22,4 +22,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
             video.currentTime = 0; // Reiniciar o vídeo
         }
     }
+    
 });

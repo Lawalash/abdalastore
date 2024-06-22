@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/Navbar';
@@ -14,7 +13,7 @@ const App = () => {
       <Router>
         <NavigationBar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/carrinho" element={<Carrinho />} />
           <Route path="/contato" element={<Contato />} />
