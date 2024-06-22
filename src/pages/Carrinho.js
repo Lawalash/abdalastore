@@ -1,16 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import { Container, ListGroup, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 const Carrinho = () => {
   const { carrinho, removerDoCarrinho } = useContext(CartContext);
+  const [linkPagamento, setLinkPagamento] = useState('');
 
-  // Calcula o total da compra somando os preços de todos os produtos no carrinho
   const totalCompra = carrinho.reduce((total, produto) => total + produto.preco, 0);
 
-  const handleComprar = () => {
-    // Lógica para o botão de compra
-    alert('Compra realizada com sucesso!');
+  const handleComprar = async () => {
+    try {
+      const response = await axios.get('http://127.0.0.1:5000/gerar_link_pagamento');
+      setLinkPagamento(response.data);
+      window.location.href = response.data; // Redireciona para o link de pagamento
+    } catch (error) {
+      console.error('Erro ao gerar link de pagamento:', error);
+    }
   };
 
   return (
